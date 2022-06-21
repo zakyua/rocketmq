@@ -35,7 +35,7 @@ public class SyncProducer {
             Message message = new Message("SyncTopic", "SyncTag", body);
             // 7.为消息指定key
             message.setKeys("key_"+i);
-            // 8.同步发送消息
+            // 8.同步发送消息,同步发送消息会有返回值
             SendResult sendResult = producer.send(message);
             System.out.println(sendResult);
         }
