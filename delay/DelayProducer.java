@@ -29,7 +29,7 @@ public class DelayProducer {
             byte[] body = ("Hi," + i).getBytes();
             Message message = new Message("DelayTopic", "DelayTag", body);
             // 5.指定消息延迟等级为3级，即延迟10s
-            message.setDelayTimeLevel(30);
+            message.setDelayTimeLevel(3);
             // 6.消息发送
             SendResult sendResult = producer.send(message);
             // 7.输出消息被发送的时间
